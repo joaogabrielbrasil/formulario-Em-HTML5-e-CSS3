@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    
+    <script type="text/javascript" src="js/script.js"></script>
+    <title>Document</title>
+    
+</head>
+<body>
+    <h1 id="titulo">Cadastro de Usuário</h1>
+
+    <form method="post" id="fContatos" action="mailto:jgjoaogabriel9@gmail.com">
+        <fieldset>
+            <legend><strong>Indentificação do Usuário</strong></legend>
+                    <div>
+                        <p><label for="cNome"><strong><strong>Nome</strong></strong></label> <input type="text" name="tNome" id="cNome" size="20" maxlength="20" placeholder="Seu nome" required></p>
+                        
+                        <p><label for="cSenha"><strong><strong>Senha</strong></strong></label> <input type="password" name="tSenha" id="cSenha" size="20" maxlength="20" placeholder="Seu senha" required></p>
+                        
+                        <p><label for="cEmail"><strong><strong>E-mail</strong></strong></label> <input type="email" name="tEmail" id="cEmail" size="20" maxlength="20" placeholder="Seu senha" required></p>
+                        
+
+                        <fieldset>
+                            <p><label for="cMasc"><input type="radio" name="tI" id="cMasc" required  checked><strong>Masculino</strong></label>
+                            <label for="cFem"><input type="radio" name="tI" id="cFem" required><strtong><strong>Feminino</strong></strtong></label></p>
+                        </fieldset>
+
+                        <p><label for="cNasc"><strong>Data de Nascimento</strong></label><input type="date" name="tNasc" id="cNasc" required></p>
+
+                    </div>
+        </fieldset>
+            <fieldset>
+                <legend><strong>Endereço de Usuário</strong></legend>
+                    <p><label for="cRua"><strong>Logradouro</strong><input type="text" name="tRua" id="cRua" size="20" maxlength="20" placeholder="Seu endereço" required></label></p>
+
+                    <p><label for="cNum"><strong>número</strong></label><input type="number" name="tNum" id="cNum" min="0" max="100" placeholder="Numero" required value="0"></p>
+
+                    <p><label for="cEst"><strong>Estado</strong></label>
+                       <select name="tEst" id="cEst" required> 
+                           <option value="" disabled>Seu Estado</option>
+                           <optgroup label="Estados da Região Centro Oeste">
+                               <option value="DF">Exemplo</option>
+                               <option value="RJ">Exemplo</option>
+                               <option value="SP">Exemplo</option>
+                               <option value="PR">Exemplo</option>
+                           </optgroup>
+                           <optgroup label="Estados da Região Norte">
+                            <option value="DF">Exemplo</option>
+                            <option value="RJ">Exemplo</option>
+                            <option value="SP">Exemplo</option>
+                            <option value="PR">Exemplo</option>
+                        </optgroup>
+                        <optgroup label="Estado da Região Sul">
+                            <option value="DF" selected>Vale do Amanhecer</option>
+                            <option value="RJ">Exemplo</option>
+                            <option value="SP">Exemplo</option>
+                            <option value="PR">Exemplo</option>
+                        </optgroup>
+                        <optgroup label="Estados da Região Sudeste">
+                            <option value="DF">Exemplo</option>
+                            <option value="RJ">Exemplo</option>
+                            <option value="SP">Exemplo</option>
+                            <option value="PR">Exemplo</option>
+                        </optgroup>
+                        <optgroup label="Estados da Região Nordeste">
+                            <option value="DF">Exemplo</option>
+                            <option value="RJ">Exemplo</option>
+                            <option value="SP">Exemplo</option>
+                            <option value="PR">Exemplo</option>
+                        </optgroup>
+                       </select>
+                    </p>
+
+                    <p><label for="cCid"><strong>Cidade</strong></label>
+                        <input type="text" name="tCid" id="cCid" size="20" maxlength="20" placeholder="Seu Estado" required list="cidades">
+                        <datalist id="cidades">
+                            <option value="Vale do Amanhecer"></option>
+                            <option value="Planaltina"></option>
+                            <option value="Ceilandia"></option>
+                            <option value="Paranoá"></option>
+                            <option value="Granja do Torto"></option>
+                            <option value="São Sebastião"></option>
+                            <option value="Taguatinga"></option>
+                            <option value="Recanto das Emas"></option>
+                            <option value="Asa Norte"></option>
+                            <option value="Asa Sul"></option>
+                        </datalist>
+                    </p>
+            </fieldset>
+        
+            <fieldset>
+                <legend>Mensagem do Usuário</legend>
+                    <p><label for="cUrg"><strong>Grau de Urgência</strong></label>
+                           &nbsp;&nbsp;Min<input type="range" min="0" max="100" name="tUrg" id="cUrg" step="10">Máx
+                    </p>
+
+                    <p><label for=""><strong>Mensagem</strong></label>
+                        <textarea  name="tMsg" id="cMsg" cols="60" rows="10" placeholder="Escreva a sua mensagem">
+
+                        </textarea>
+                    </p>
+
+            </fieldset>
+        
+            <fieldset>
+                <legend>Quero um Google Glass</legend>
+                    <p><label for=""> <input type="checkbox" name="tPed" id='cPed' required checked>Gostaria de adquirir um google glass quando disponível</label>
+                    </p>
+
+                    <p><label for="">Cor<input type="color" name="tCor" id="cCor"  value="#0000FF"></label>
+                    </p>
+
+                    <p><label for="">Quantidade<input type="number" name="tCor" id="cCor" min="0" max="50" value="0"></label>
+                    </p>
+
+                    <p><label for=""><strong>Preço Total R$</strong></label>
+                        <input type="text" name="tQtd" id="cQtd" readonly>
+                    </p>
+            </fieldset>
+
+            <button tpe="submit" class="botao">Enviar</button>
+    </form>
+        
+
+
+</body>
+</html>
